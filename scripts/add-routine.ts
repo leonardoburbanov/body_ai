@@ -29,10 +29,8 @@ for (const envPath of envPaths) {
       envLoaded = true;
       loadedPath = envPath;
       console.log(`📄 Loaded environment from: ${envPath}`);
-      // Debug: Show if MONGODB_URL was loaded (without showing the value)
       if (process.env.MONGODB_URL || process.env.MONGODB_URI) {
-        const mongoUrl = process.env.MONGODB_URL || process.env.MONGODB_URI;
-        console.log(`✅ MONGODB_URL found (${mongoUrl ? mongoUrl.substring(0, 20) + "..." : "empty"})`);
+        console.log(`✅ MONGODB_URL found`);
       } else {
         console.warn(`⚠️  MONGODB_URL not found in ${envPath}`);
       }
