@@ -8,7 +8,7 @@ import { mongodbConnection } from "../database/mongodb-connection";
  * Handles user data persistence in MongoDB
  */
 export class MongoDBUserRepository implements UserRepository {
-  private getCollection(): Collection {
+  private getCollection(): Collection<User> {
     return mongodbConnection.getDatabase().collection<User>("users");
   }
 

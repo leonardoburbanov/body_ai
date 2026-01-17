@@ -20,7 +20,7 @@ import { LogOut, User, LayoutDashboard } from "lucide-react";
  * Header component for the dashboard
  * Displays navigation and user menu
  */
-export function Header() {
+export function Header({ children }: { children?: React.ReactNode }) {
   const router = useRouter();
   const [user, setUser] = React.useState<{ name: string; email: string } | null>(null);
 
@@ -67,6 +67,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo and Brand */}
         <div className="flex items-center gap-6">
+          {children}
           <Link href="/dashboard" className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <LayoutDashboard className="h-5 w-5" />

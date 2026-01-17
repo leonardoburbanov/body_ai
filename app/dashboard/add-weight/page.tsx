@@ -2,13 +2,13 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { WeightHistory } from "@/components/weight-history";
+import { WeightEntryForm } from "@/components/weight-entry-form";
 
 /**
- * Dashboard page
- * Displays the weight history
+ * Add weight page
+ * Displays the weight entry form
  */
-export default function DashboardPage() {
+export default function AddWeightPage() {
   const router = useRouter();
   const [userId, setUserId] = React.useState<string | null>(null);
   const [isLoading, setIsLoading] = React.useState(true);
@@ -44,12 +44,12 @@ export default function DashboardPage() {
     <div className="container mx-auto p-4 py-8">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Weight History</h1>
+          <h1 className="text-3xl font-bold mb-2">Add Weight Entry</h1>
           <p className="text-muted-foreground">
-            View your weight tracking history
+            Record your weight and track your progress
           </p>
         </div>
-        <WeightHistory userId={userId} />
+        <WeightEntryForm userId={userId} />
       </div>
     </div>
   );

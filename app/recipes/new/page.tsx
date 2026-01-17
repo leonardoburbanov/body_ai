@@ -2,24 +2,22 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { WeightHistory } from "@/components/weight-history";
+import { RecipeCreator } from "@/components/recipe-creator";
 
 /**
- * Dashboard page
- * Displays the weight history
+ * New recipe page
+ * Displays the recipe creator
  */
-export default function DashboardPage() {
+export default function NewRecipePage() {
   const router = useRouter();
   const [userId, setUserId] = React.useState<string | null>(null);
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    // Get user ID from localStorage (set during login)
     const storedUserId = localStorage.getItem("userId");
     const storedUser = localStorage.getItem("user");
 
     if (!storedUserId || !storedUser) {
-      // Redirect to login if not authenticated
       router.push("/login");
       return;
     }
@@ -42,14 +40,18 @@ export default function DashboardPage() {
 
   return (
     <div className="container mx-auto p-4 py-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Weight History</h1>
+          <h1 className="text-3xl font-bold mb-2">Nueva Receta</h1>
           <p className="text-muted-foreground">
-            View your weight tracking history
+            Crea un plan nutricional semanal personalizado
           </p>
         </div>
-        <WeightHistory userId={userId} />
+        <RecipeCreator
+          userId={userId}
+          onSave={() => router.push("/dashboard/nutrition")}
+          onCancel={() => router.push("/dashboard/nutrition")}
+        />
       </div>
     </div>
   );

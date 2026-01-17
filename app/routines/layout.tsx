@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/sidebar";
 
 /**
- * Dashboard layout
- * Wraps dashboard pages with header, sidebar, and common layout
+ * Routines layout
+ * Wraps routines pages with header, sidebar, and common layout
  */
-export default function DashboardLayout({
+export default function RoutinesLayout({
   children,
 }: {
   children: React.ReactNode;

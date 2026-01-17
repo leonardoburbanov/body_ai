@@ -8,7 +8,7 @@ import { mongodbConnection } from "../database/mongodb-connection";
  * Handles weight data persistence in MongoDB
  */
 export class MongoDBWeightRepository implements WeightRepository {
-  private getCollection(): Collection {
+  private getCollection(): Collection<Weight> {
     return mongodbConnection.getDatabase().collection<Weight>("weights");
   }
 

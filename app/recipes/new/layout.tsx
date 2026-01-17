@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/sidebar";
 
 /**
- * Dashboard layout
- * Wraps dashboard pages with header, sidebar, and common layout
+ * New recipe layout
+ * Wraps new recipe page with header, sidebar, and common layout
  */
-export default function DashboardLayout({
+export default function NewRecipeLayout({
   children,
 }: {
   children: React.ReactNode;
