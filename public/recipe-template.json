@@ -1,0 +1,155 @@
+{
+  "name": "Plan Nutricional Semanal - Transformación",
+  "calorias_diarias_objetivo": "2200-2300 kcal",
+  "proteina_diaria_objetivo": "160-170 g",
+  "carbohidratos_diarios_objetivo": "230-280 g",
+  "grasa_diaria_objetivo": "65-75 g",
+  "comidas_por_dia": 3,
+  "frutas_por_dia": 2,
+  "semana": {
+    "lunes": {
+      "comida_1": {
+        "huevos": "4 unidades",
+        "avena": "80 g",
+        "banana": "1 unidad"
+      },
+      "comida_2": {
+        "pollo_pechuga": "250 g",
+        "arroz_blanco": "200 g",
+        "brocoli": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "tilapia": "250 g",
+        "camote": "200 g",
+        "ensalada_verde": "cantidad libre",
+        "manzana": "1 unidad",
+        "aceite_oliva": "15 g"
+      }
+    },
+    "martes": {
+      "comida_1": {
+        "huevos": "4 unidades",
+        "avena": "70 g",
+        "manzana": "1 unidad"
+      },
+      "comida_2": {
+        "lomo_cerdo": "250 g",
+        "papa": "300 g",
+        "zanahoria": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "pollo_pechuga": "230 g",
+        "arroz_blanco": "180 g",
+        "espinaca": "cantidad libre",
+        "papaya": "150 g",
+        "aceite_oliva": "15 g"
+      }
+    },
+    "miercoles": {
+      "comida_1": {
+        "huevos": "3 unidades",
+        "claras": "3 unidades",
+        "avena": "80 g",
+        "banana": "1 unidad"
+      },
+      "comida_2": {
+        "pollo_pechuga": "250 g",
+        "arroz_blanco": "200 g",
+        "brocoli": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "tilapia": "250 g",
+        "camote": "200 g",
+        "ensalada": "cantidad libre",
+        "manzana": "1 unidad",
+        "aceite_oliva": "15 g"
+      }
+    },
+    "jueves": {
+      "comida_1": {
+        "huevos": "4 unidades",
+        "avena": "70 g",
+        "fresas": "150 g"
+      },
+      "comida_2": {
+        "lomo_cerdo": "250 g",
+        "arroz_blanco": "200 g",
+        "calabacin": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "pollo_pechuga": "230 g",
+        "papa": "300 g",
+        "espinaca": "cantidad libre",
+        "naranja": "1 unidad",
+        "aceite_oliva": "15 g"
+      }
+    },
+    "viernes": {
+      "comida_1": {
+        "huevos": "3 unidades",
+        "claras": "3 unidades",
+        "avena": "80 g",
+        "banana": "1 unidad"
+      },
+      "comida_2": {
+        "pollo_pechuga": "250 g",
+        "arroz_blanco": "200 g",
+        "brocoli": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "tilapia": "250 g",
+        "camote": "200 g",
+        "ensalada": "cantidad libre",
+        "manzana": "1 unidad",
+        "aceite_oliva": "15 g"
+      }
+    },
+    "sabado": {
+      "comida_1": {
+        "huevos": "4 unidades",
+        "avena": "70 g",
+        "papaya": "150 g"
+      },
+      "comida_2": {
+        "lomo_cerdo": "250 g",
+        "arroz_blanco": "200 g",
+        "verduras_mixtas": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "pollo_pechuga": "230 g",
+        "papa": "300 g",
+        "ensalada": "cantidad libre",
+        "banana": "1 unidad",
+        "aceite_oliva": "15 g"
+      }
+    },
+    "domingo": {
+      "comida_1": {
+        "huevos": "3 unidades",
+        "claras": "3 unidades",
+        "avena": "70 g",
+        "manzana": "1 unidad"
+      },
+      "comida_2": {
+        "tilapia": "270 g",
+        "arroz_blanco": "200 g",
+        "verduras": "cantidad libre",
+        "aceite_oliva": "15 g"
+      },
+      "comida_3": {
+        "pollo_pechuga": "230 g",
+        "camote": "200 g",
+        "ensalada": "cantidad libre",
+        "banana": "1 unidad",
+        "aceite_oliva": "15 g"
+      }
+    }
+  },
+  "notes": "Plan nutricional diseñado para transformación física. Ajustar cantidades según necesidades individuales."
+}

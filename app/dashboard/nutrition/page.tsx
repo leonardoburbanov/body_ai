@@ -2,9 +2,12 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { RecipeList } from "@/components/recipe-list";
 import { RecipeViewer } from "@/components/recipe-viewer";
 import { TodayRecipe } from "@/components/today-recipe";
+import { Button } from "@/components/ui/button";
+import { Upload } from "lucide-react";
 
 /**
  * Nutrition page
@@ -150,13 +153,19 @@ export default function NutritionPage() {
 
         {view === "list" && (
           <div className="space-y-6">
-            <div className="mb-4">
+            <div className="mb-4 flex items-center justify-between">
               <button
                 onClick={() => setView("today")}
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 ← Ver receta de hoy
               </button>
+              <Link href="/recipes/upload">
+                <Button variant="outline" size="sm">
+                  <Upload className="h-4 w-4 mr-2" />
+                  Subir desde JSON
+                </Button>
+              </Link>
             </div>
             <RecipeList
               userId={userId}
