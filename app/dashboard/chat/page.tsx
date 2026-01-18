@@ -164,7 +164,7 @@ export default function ChatPage() {
                             {message.parts
                               ?.filter((part: any) => part.type === "text")
                               .map((part: any) => part.text)
-                              .join("") || message.content || ""}
+                              .join("") || ""}
                           </ReactMarkdown>
                         </div>
                       ) : (
@@ -173,7 +173,7 @@ export default function ChatPage() {
                             ?.filter((part: any) => part.type === "text")
                             .map((part: any, idx: number) => (
                               <span key={idx}>{part.text}</span>
-                            )) || message.content || ""}
+                            )) || ""}
                         </div>
                       )}
                     </div>
