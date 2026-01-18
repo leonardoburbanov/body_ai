@@ -55,6 +55,8 @@ const exampleRecipe = {
   name: "Plan Nutricional Semanal - Transformación",
   calorias_diarias_objetivo: "2200-2300 kcal",
   proteina_diaria_objetivo: "160-170 g",
+  carbohidratos_diarios_objetivo: "230-280 g",
+  grasa_diaria_objetivo: "230-280 g",
   comidas_por_dia: 3,
   frutas_por_dia: 2,
   semana: {
@@ -278,6 +280,8 @@ async function addRecipe() {
     console.log(`   Name: ${exampleRecipe.name}`);
     console.log(`   Calorías diarias: ${exampleRecipe.calorias_diarias_objetivo}`);
     console.log(`   Proteína diaria: ${exampleRecipe.proteina_diaria_objetivo}`);
+    console.log(`   Carbohidratos diarios: ${exampleRecipe.carbohidratos_diarios_objetivo}`);
+    console.log(`   Grasa diaria: ${exampleRecipe.grasa_diaria_objetivo}`);
     console.log(`   Comidas por día: ${exampleRecipe.comidas_por_dia}`);
     console.log(`   Frutas por día: ${exampleRecipe.frutas_por_dia}`);
     if (userId) {

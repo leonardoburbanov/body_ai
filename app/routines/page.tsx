@@ -2,10 +2,13 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { WorkoutRoutine } from "@/components/workout-routine";
 import { RoutineList } from "@/components/routine-list";
 import { RoutineViewer } from "@/components/routine-viewer";
 import { TodayRoutine } from "@/components/today-routine";
+import { Button } from "@/components/ui/button";
+import { Upload } from "lucide-react";
 
 /**
  * Workout routine page
@@ -114,10 +117,20 @@ export default function RoutinesPage() {
     <div className="container mx-auto p-4 py-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Rutinas</h1>
-          <p className="text-muted-foreground">
-            Gestiona tus rutinas de entrenamiento y consulta el entrenamiento del día
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold mb-2">Rutinas</h1>
+              <p className="text-muted-foreground">
+                Gestiona tus rutinas de entrenamiento y consulta el entrenamiento del día
+              </p>
+            </div>
+            <Link href="/routines/upload">
+              <Button variant="outline">
+                <Upload className="h-4 w-4 mr-2" />
+                Subir desde JSON
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {view === "today" && (
@@ -151,13 +164,19 @@ export default function RoutinesPage() {
 
         {view === "list" && (
           <div className="space-y-6">
-            <div className="mb-4">
+            <div className="mb-4 flex items-center justify-between">
               <button
                 onClick={() => setView("today")}
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 ← Ver rutina de hoy
               </button>
+              <Link href="/routines/upload">
+                <Button variant="outline" size="sm">
+                  <Upload className="h-4 w-4 mr-2" />
+                  Subir desde JSON
+                </Button>
+              </Link>
             </div>
             <RoutineList
               userId={userId}

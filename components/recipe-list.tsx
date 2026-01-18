@@ -20,6 +20,8 @@ interface RecipeListItem {
   name: string;
   calorias_diarias_objetivo: string;
   proteina_diaria_objetivo: string;
+  carbohidratos_diarios_objetivo: string;
+  grasa_diaria_objetivo: string;
   comidas_por_dia: number;
   frutas_por_dia: number;
   createdAt?: string;
@@ -117,6 +119,8 @@ export function RecipeList({
                     <div className="flex flex-wrap gap-4 text-sm">
                       <span>Calorías: {recipe.calorias_diarias_objetivo}</span>
                       <span>Proteína: {recipe.proteina_diaria_objetivo}</span>
+                      <span>Carbohidratos: {recipe.carbohidratos_diarios_objetivo}</span>
+                      <span>Grasa: {recipe.grasa_diaria_objetivo}</span>
                       <span>{recipe.comidas_por_dia} comidas/día</span>
                       <span>{recipe.frutas_por_dia} frutas/día</span>
                     </div>

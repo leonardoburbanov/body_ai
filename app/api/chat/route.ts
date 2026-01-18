@@ -82,6 +82,8 @@ export async function POST(request: NextRequest) {
               name: recipe.name,
               calorias_diarias_objetivo: recipe.calorias_diarias_objetivo,
               proteina_diaria_objetivo: recipe.proteina_diaria_objetivo,
+              carbohidratos_diarios_objetivo: recipe.carbohidratos_diarios_objetivo,
+              grasa_diaria_objetivo: recipe.grasa_diaria_objetivo,
               comidas_por_dia: recipe.comidas_por_dia,
               frutas_por_dia: recipe.frutas_por_dia,
               semana: recipe.semana,

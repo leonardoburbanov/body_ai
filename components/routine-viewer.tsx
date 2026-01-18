@@ -168,13 +168,13 @@ export function RoutineViewer({
               )}
               {onDelete && (
                 <Button
-                  variant="destructive"
-                  size="sm"
+                  variant="ghost"
+                  size="icon"
                   onClick={handleDelete}
                   disabled={isDeleting}
+                  className="text-muted-foreground hover:text-foreground"
                 >
-                  <Trash2 className="h-4 w-4 mr-2" />
-                  Eliminar
+                  <Trash2 className="h-4 w-4" />
                 </Button>
               )}
               {onClose && (

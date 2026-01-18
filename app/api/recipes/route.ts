@@ -61,6 +61,8 @@ export async function POST(request: NextRequest) {
       name,
       calorias_diarias_objetivo,
       proteina_diaria_objetivo,
+      carbohidratos_diarios_objetivo,
+      grasa_diaria_objetivo,
       comidas_por_dia,
       frutas_por_dia,
       semana,
@@ -72,6 +74,8 @@ export async function POST(request: NextRequest) {
       !name ||
       !calorias_diarias_objetivo ||
       !proteina_diaria_objetivo ||
+      !carbohidratos_diarios_objetivo ||
+      !grasa_diaria_objetivo ||
       !comidas_por_dia ||
       !frutas_por_dia ||
       !semana
@@ -79,7 +83,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "UserId, name, calorias_diarias_objetivo, proteina_diaria_objetivo, comidas_por_dia, frutas_por_dia, and semana are required",
+            "UserId, name, calorias_diarias_objetivo, proteina_diaria_objetivo, carbohidratos_diarios_objetivo, grasa_diaria_objetivo, comidas_por_dia, frutas_por_dia, and semana are required",
         },
         { status: 400 }
       );
@@ -92,6 +96,8 @@ export async function POST(request: NextRequest) {
       name,
       calorias_diarias_objetivo,
       proteina_diaria_objetivo,
+      carbohidratos_diarios_objetivo,
+      grasa_diaria_objetivo,
       comidas_por_dia: parseInt(comidas_por_dia),
       frutas_por_dia: parseInt(frutas_por_dia),
       semana,

@@ -74,6 +74,8 @@ export function RecipeCreator({
     name: "",
     calorias_diarias_objetivo: "",
     proteina_diaria_objetivo: "",
+    carbohidratos_diarios_objetivo: "",
+    grasa_diaria_objetivo: "",
     comidas_por_dia: "3",
     frutas_por_dia: "2",
     notes: "",
@@ -136,7 +138,7 @@ export function RecipeCreator({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.calorias_diarias_objetivo || !formData.proteina_diaria_objetivo) {
+    if (!formData.name || !formData.calorias_diarias_objetivo || !formData.proteina_diaria_objetivo || !formData.carbohidratos_diarios_objetivo || !formData.grasa_diaria_objetivo) {
       toast.error("Por favor completa todos los campos obligatorios");
       return;
     }
@@ -154,6 +156,8 @@ export function RecipeCreator({
           name: formData.name,
           calorias_diarias_objetivo: formData.calorias_diarias_objetivo,
           proteina_diaria_objetivo: formData.proteina_diaria_objetivo,
+          carbohidratos_diarios_objetivo: formData.carbohidratos_diarios_objetivo,
+          grasa_diaria_objetivo: formData.grasa_diaria_objetivo,
           comidas_por_dia: parseInt(formData.comidas_por_dia),
           frutas_por_dia: parseInt(formData.frutas_por_dia),
           semana,
@@ -227,6 +231,36 @@ export function RecipeCreator({
                   }))
                 }
                 placeholder="Ej: 160-170 g"
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="carbohidratos">Carbohidratos Diarios Objetivo *</Label>
+              <Input
+                id="carbohidratos"
+                value={formData.carbohidratos_diarios_objetivo}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    carbohidratos_diarios_objetivo: e.target.value,
+                  }))
+                }
+                placeholder="Ej: 230-280 g"
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="grasa">Grasa Diaria Objetivo *</Label>
+              <Input
+                id="grasa"
+                value={formData.grasa_diaria_objetivo}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    grasa_diaria_objetivo: e.target.value,
+                  }))
+                }
+                placeholder="Ej: 230-280 g"
                 required
               />
             </div>

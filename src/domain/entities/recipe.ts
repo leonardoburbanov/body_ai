@@ -43,6 +43,8 @@ export interface Recipe {
   name: string;
   calorias_diarias_objetivo: string;
   proteina_diaria_objetivo: string;
+  carbohidratos_diarios_objetivo: string;
+  grasa_diaria_objetivo: string;
   comidas_por_dia: number;
   frutas_por_dia: number;
   semana: WeeklyPlan;
@@ -59,6 +61,8 @@ export interface CreateRecipeDTO {
   name: string;
   calorias_diarias_objetivo: string;
   proteina_diaria_objetivo: string;
+  carbohidratos_diarios_objetivo: string;
+  grasa_diaria_objetivo: string;
   comidas_por_dia: number;
   frutas_por_dia: number;
   semana: WeeklyPlan;
@@ -72,6 +76,8 @@ export interface UpdateRecipeDTO {
   name?: string;
   calorias_diarias_objetivo?: string;
   proteina_diaria_objetivo?: string;
+  carbohidratos_diarios_objetivo?: string;
+  grasa_diaria_objetivo?: string;
   comidas_por_dia?: number;
   frutas_por_dia?: number;
   semana?: WeeklyPlan;

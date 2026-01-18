@@ -53,6 +53,8 @@ interface Recipe {
   name: string;
   calorias_diarias_objetivo: string;
   proteina_diaria_objetivo: string;
+  carbohidratos_diarios_objetivo: string;
+  grasa_diaria_objetivo: string;
   comidas_por_dia: number;
   frutas_por_dia: number;
   semana: WeeklyPlan;
@@ -181,7 +183,7 @@ export function RecipeViewer({
           </div>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
               <p className="text-sm text-muted-foreground">Calorías diarias</p>
               <p className="font-semibold">{recipe.calorias_diarias_objetivo}</p>
@@ -189,6 +191,14 @@ export function RecipeViewer({
             <div>
               <p className="text-sm text-muted-foreground">Proteína diaria</p>
               <p className="font-semibold">{recipe.proteina_diaria_objetivo}</p>
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Carbohidratos diarios</p>
+              <p className="font-semibold">{recipe.carbohidratos_diarios_objetivo}</p>
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Grasa diaria</p>
+              <p className="font-semibold">{recipe.grasa_diaria_objetivo}</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Comidas por día</p>
