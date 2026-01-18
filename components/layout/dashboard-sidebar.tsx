@@ -9,6 +9,7 @@ import {
   History,
   Calculator,
   Dumbbell,
+  MessageSquare,
 } from "lucide-react";
 import {
   Sidebar,
@@ -31,8 +32,13 @@ export function DashboardSidebar() {
 
   const menuItems = [
     {
-      title: "Weight History",
+      title: "Dashboard",
       url: "/dashboard",
+      icon: LayoutDashboard,
+    },
+    {
+      title: "Weight History",
+      url: "/dashboard/weight-history",
       icon: History,
     },
     {
@@ -49,6 +55,11 @@ export function DashboardSidebar() {
       title: "Routines",
       url: "/routines",
       icon: Dumbbell,
+    },
+    {
+      title: "AI Chat",
+      url: "/dashboard/chat",
+      icon: MessageSquare,
     },
   ];
 

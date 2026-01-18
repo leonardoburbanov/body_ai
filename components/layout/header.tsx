@@ -23,8 +23,11 @@ import { LogOut, User, LayoutDashboard } from "lucide-react";
 export function Header({ children }: { children?: React.ReactNode }) {
   const router = useRouter();
   const [user, setUser] = React.useState<{ name: string; email: string } | null>(null);
+  const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
+    // Mark component as mounted to prevent hydration issues
+    setMounted(true);
     // Get user data from localStorage
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -78,7 +81,7 @@ export function Header({ children }: { children?: React.ReactNode }) {
 
         {/* User Menu */}
         <div className="flex items-center gap-4">
-          {user ? (
+          {mounted && user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="relative h-10 w-10 rounded-full">
@@ -118,10 +121,12 @@ export function Header({ children }: { children?: React.ReactNode }) {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-          ) : (
+          ) : mounted ? (
             <Button variant="outline" asChild>
               <Link href="/login">Sign In</Link>
             </Button>
+          ) : (
+            <div className="h-10 w-10" /> // Placeholder to prevent layout shift
           )}
         </div>
       </div>
